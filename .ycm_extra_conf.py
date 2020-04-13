@@ -1,12 +1,15 @@
 import os
 import ycm_core
-import pathlib
 
-# includeDir = "-isystem" + pathlib.Path().absolute() + "/source"
-# includeDir = "C:/Users/Maxim/temp/hello_world/source"
-includeDir = "source"
+include = "source"
 
 def Settings(**kwargs):
-    return { 'flags': ['-x', 'c++', '-Wall', '-Wextra', '-Werror', '-isystem', includeDir] }
-
-SOURCE_EXTENSIONS = ['.cpp']
+    return { 'flags': [
+        '-x',
+        'c++',
+        '-std=c++17',
+        '-Wall',
+        '-Wextra',
+        '-Werror',
+        '-isystem', include,
+    ] }
